@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo o DOM</title>
+    <style>
+        #area{
+            font: normal 15pt arial;
+            background-color: aqua;
+            color: rgb(5, 0, 0);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" >
+        Ola, Mundo!
+        xama.
+</div>
+
+    <script>
+        var area = window.document.getElementById('area')
+        function clicar(){
+            area.innerText = 'Clicou!'
+            area.style.backgroundColor = 'green'
+        }
+
+        function entrar(){
+            area.innerText = 'Entrou!'
+            area.style.backgroundColor = 'orange'
+        }
+
+        function sair(){
+            area.innerText = 'Saiu!'
+            area.style.backgroundColor = 'aqua'
+        }
+    </script>
+</body>
+</html>
